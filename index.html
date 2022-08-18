@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="portal">
+        <div id="portal2">
+            <div id="portal3"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let portal= document.getElementById('portal');
+    let portal2= document.getElementById('portal2');
+    for (let i=0; i< 400; i++){
+        let chispa = document.createElement("div");
+        chispa.className="chispa";
+        chispa.style.rotate = i*2+'deg';
+        let chispaTRanslation = Math.random()*(20)+100;
+        chispa.style.transform = 'translate('+chispaTRanslation+'px)';
+        portal.appendChild(chispa);
+    }
+    for (let i=0; i< 500; i++){
+        let chispa2 = document.createElement("div");
+        chispa2.className="chispa2";
+        chispa2.style.rotate = i*2+'deg';
+        let chispaTRanslation2 = Math.random()*(20)+60;
+        chispa2.style.transform = 'translate('+chispaTRanslation2+'px)';
+        portal2.appendChild(chispa2);
+    }
+    for (let i=0; i< 500; i++){
+        let chispa3 = document.createElement("div");
+        chispa3.className="chispa3";
+        chispa3.style.rotate = i*2+'deg';
+        let chispaTRanslation3 = Math.random()*(20);
+        chispa3.style.transform = 'translate('+chispaTRanslation3+'px)';
+        portal3.appendChild(chispa3);
+    }
+</script>
